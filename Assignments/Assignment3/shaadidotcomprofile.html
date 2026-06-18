@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>My Profile</h1>
+    <form>
+        <label for="name"><b>Name:</b></label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email"><b>Email:</b></label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="dob"><b>Date of Birth:</b></label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <label for ="gender"><b>Gender:</b></label>
+        <input type="radio" id="gender" name="gender" value="male" required>Male
+        <input type="radio" id="gender" name="gender" value="female">Female
+        <br><br>
+        <label for="educational-qualifications"><b>Educational Qualifications:</b></label><br><br>
+        <input type="checkbox" id="B.Tech" name="educational-qualifications"><label for="B.Tech">B.Tech</label><br><br>
+        <input type="checkbox" id="M.Tech" name="educational-qualifications"><label for="M.Tech">M.Tech</label><br><br>
+        <input type="checkbox" id="BBA" name="educational-qualifications"><label for="BBA">BBA</label><br><br>
+        <input type="checkbox" id="MBA" name="educational-qualifications"><label for="MBA">MBA</label><br><br>
+        <input type="checkbox" id="Other" name="educational-qualifications"><label for="Other">Other</label><br><br>
+        <label for="bio"><b>Bio:</b></label><br>
+        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea><br><br>
+        <h3>Upload your profile picture:</h3>
+        <input type="file" name="myfile"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
