@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Restaurant Page</title>
+</head>
+<body>
+    <h1>India Fusion-Where Taste meets Diversity</h1>
+    <p>Welcome to India Fusion, a culinary haven that celebrates the rich tapestry of Indian flavors and traditions. Our restaurant is dedicated to bringing you an unforgettable dining experience that combines the best of Indian cuisine with a modern twist.</p>
+    <h2>Our Menu</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Dish</th>
+            
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Butter Chicken</td>
+            <td>Rs.290</td>
+        </tr>
+        <tr>
+            <td>Paneer Tikka</td>
+            <td>Rs.250</td>
+        </tr>
+        <tr>
+            <td>Chole Bhature</td>
+            <td>Rs.200</td>
+        </tr>
+        <tr>
+            <td>Masala Dosa</td>
+            <td>Rs.150</td>
+        </tr>
+        <tr>
+            <td>Fried Rice with Manchurian</td>
+            <td>Rs.290</td>
+        </tr>
+         <tr>
+            <td>Chicken Biryani</td>
+            <td>Rs.350</td>
+        </tr>
+        <tr>
+            <td>Ras Malai</td>
+            <td>Rs.80</td>
+        </tr>
+        
+    </table>
+
+    <h2>Reviews</h2>
+    <ol>
+        <li>Rohit-"India Fusion is a culinary gem! The flavors are authentic and the presentation is stunning. Highly recommend the Butter Chicken!" - Priya S.</li>
+        <li>Neha-"The Paneer Tikka at India Fusion is a must-try! The spices are perfectly balanced, and the dish is bursting with flavor." - Rahul M.</li>
+        <li>Niharika-"I had the Chole Bhature at India Fusion, and it was absolutely delicious! The bhature was fluffy, and the chole had a rich, tangy taste." - Anjali K.</li>
+        <li>Arjun-"The Masala Dosa at India Fusion is a breakfast delight! The dosa is crispy, and the masala filling is flavorful and satisfying." - Arjun R.</li>
+        <li>Varun-"India Fusion's Fried Rice with Manchurian is a fusion masterpiece! The combination of Indian spices and Chinese flavors creates a unique and delicious dish." - Neha P.</li>
+    </ol>
+
+    <h2>Order With Us</h2>
+    <p>Please place your order through this form.</p>
+    <form action="/submit_order.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="dish">Select Dish:</label>
+        <select id="dish" name="dish" required>
+            <option value="">--Select a Dish--</option>
+            <option value="Butter Chicken">Butter Chicken</option>
+            <option value="Paneer Tikka">Paneer Tikka</option>
+            <option value="Chole Bhature">Chole Bhature</option>
+            <option value="Masala Dosa">Masala Dosa</option>
+            <option value="Fried Rice with Manchurian">Fried Rice with Manchurian</option>
+            <option value="Chicken Biryani">Chicken Biryani</option>
+        </select><br><br>
+        <input type="submit" value="Place Order">
+    </form>
+</body>
