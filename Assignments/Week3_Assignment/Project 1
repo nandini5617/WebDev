@@ -1,0 +1,84 @@
+let name=prompt("Enter student's name: ");
+let marks=[];
+let total=0;
+
+for(let i=0;i<5;i++){
+   
+ let mark = Number(prompt(`Enter the marks for Subject ${i + 1}: `));
+ if(mark<0 || mark>100){
+     console.log("Enter marks between 1 to 100");
+     break;
+ }  
+ marks.push(mark);
+
+
+}
+for(let i=0;i<5;i++){
+     total=total+marks[i];
+}
+let avg=total/marks.length;
+let percentage = (total / 500) * 100;
+
+let day = prompt("Enter the day (Monday-Sunday):");
+
+switch (day.toLowerCase()) {
+
+    case "monday":
+        console.log("Monday Motivation: A fresh start! Give your best.");
+        break;
+
+    case "tuesday":
+        console.log("Tuesday Motivation: Keep learning and improving.");
+        break;
+
+    case "wednesday":
+        console.log("Wednesday Motivation: Halfway to success!");
+        break;
+
+    case "thursday":
+        console.log("Thursday Motivation: Stay focused and never give up.");
+        break;
+
+    case "friday":
+        console.log("Friday Motivation: Finish the week strong!");
+        break;
+
+    case "saturday":
+        console.log("Saturday Motivation: Practice makes perfect.");
+        break;
+
+    case "sunday":
+        console.log("Sunday Motivation: Rest today, achieve tomorrow.");
+        break;
+
+    default:
+        console.log("Invalid day entered.");
+}
+let grade;
+
+if (percentage >= 90) {
+    grade = "A+";
+}
+else if (percentage >= 80) {
+    grade = "A";
+}
+else if (percentage >= 70) {
+    grade = "B";
+}
+else if (percentage >= 50) {
+    grade = "C";
+}
+else {
+    grade = "Fail";
+}
+console.log("Student Name:", name);
+console.log("Marks:", marks);
+console.log("Subject Marks:");
+
+for (let i = 0; i < marks.length; i++) {
+    console.log(`Subject ${i + 1}: ${marks[i]}`);
+}
+console.log("Grade:", grade);
+console.log("Total Marks:", total);
+console.log("Average Marks:", avg);
+console.log("Percentage:", percentage + "%");
