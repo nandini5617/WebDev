@@ -1,0 +1,75 @@
+let customers = Number(prompt("Enter number of customers:"));
+
+for (let c = 1; c <= customers; c++) {
+
+    console.log("Customer " + c);
+
+    let products = Number(prompt("Enter number of products:"));
+
+    let totalBill = 0;
+    let maxPrice = 0;
+    let expensiveProduct = "";
+
+    for (let i = 1; i <= products; i++) {
+
+        let productName = prompt("Enter product name:");
+        let quantity = Number(prompt("Enter quantity:"));
+        let price = Number(prompt("Enter price:"));
+
+        let amount = quantity * price;
+        totalBill = totalBill + amount;
+
+        if (price > maxPrice) {
+            maxPrice = price;
+            expensiveProduct = productName;
+        }
+    }
+
+    
+    let discount = 0;
+
+    if (totalBill >= 5000) {
+        discount = totalBill * 0.20;
+    }
+    else if (totalBill >= 2000) {
+        discount = totalBill * 0.10;
+    }
+    else {
+        discount = 0;
+    }
+
+    let billAfterDiscount = totalBill - discount;
+
+    let gst = billAfterDiscount * 0.18;
+    let finalBill = billAfterDiscount + gst;
+
+    console.log("Total Bill =", totalBill);
+    console.log("Discount =", discount);
+    console.log("GST =", gst);
+    console.log("Final Bill =", finalBill);
+
+    console.log("Most Expensive Product =", expensiveProduct);
+
+   
+    let payment = prompt("Enter payment method (Cash/UPI/Card)");
+
+    switch (payment.toLowerCase()) {
+
+        case "cash":
+            console.log("Payment by Cash");
+            break;
+
+        case "upi":
+            console.log("Payment by UPI");
+            break;
+
+        case "card":
+            console.log("Payment by Card");
+            break;
+
+        default:
+            console.log("Invalid Payment Method");
+    }
+
+    console.log("------------------------");
+}
